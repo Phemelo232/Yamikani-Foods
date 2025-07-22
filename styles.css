@@ -1,0 +1,805 @@
+/* Reset default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FFFFFF; /* White */
+}
+
+/* Sidebar styles (for index.html) */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+aside h3 {
+    font-size: 1.6rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 1rem;
+}
+
+aside ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+aside ul li a span:first-child {
+    font-weight: bold;
+}
+
+aside ul li a span:last-child {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+aside ul li a:hover {
+    color: #2E7D32; /* Emerald Green */
+}
+
+/* Header styles (for all pages) */
+header {
+    background-color: #002147; /* Oxford Blue */
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #2E7D32; /* Emerald Green */
+}
+
+/* Main content styles (for all pages) */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero section (index.html) */
+section.hero, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('images/bg.jpg') no-repeat center/cover;
+    background-color: #F5F5F5; /* Fallback Light Gray */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    position: relative;
+}
+
+section.hero::before, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+section.hero h2, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+section.hero p, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+section.hero a, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2E7D32; /* Emerald Green */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+section.hero a:hover, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) a:hover {
+    background-color: #1B5E20; /* Darker Emerald Green */
+}
+
+/* Shop Hero section (shop.html) */
+.shop-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('images/bg.jpg') no-repeat center/cover;
+    background-color: #F5F5F5; /* Fallback Light Gray */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.shop-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.shop-hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.shop-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Feedback Hero section (feedback.html) */
+.feedback-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('images/bg.jpg') no-repeat center/cover;
+    background-color: #F5F5F5; /* Fallback Light Gray */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.feedback-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.feedback-hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feedback-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* About Hero section (about.html) */
+.about-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('images/bg.jpg') no-repeat center/cover;
+    background-color: #F5F5F5; /* Fallback Light Gray */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.about-hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Hero section (contact.html) */
+.contact-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('images/bg.jpg') no-repeat center/cover;
+    background-color: #F5F5F5; /* Fallback Light Gray */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.contact-hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* About Us section (index.html) */
+section.about-us, section:nth-child(2):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) {
+    margin-bottom: 2rem;
+}
+
+section.about-us h2, section:nth-child(2):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) h2 {
+    font-size: 1.8rem;
+    color: #002147; /* Oxford Blue */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+section.about-us div, section:nth-child(2):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) div {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+section.about-us p, section:nth-child(2):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* About Content section (about.html) */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.our-story, .mission, .values, .team {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.our-story h3, .mission h3, .values h3, .team h3 {
+    font-size: 1.6rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+.our-story p, .mission p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.values ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.values ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.values ul li::before {
+    content: "•";
+    color: #2E7D32; /* Emerald Green */
+    position: absolute;
+    left: -1rem;
+}
+
+.values ul li strong {
+    color: #333;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    font-size: 1.3rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Product Grid section (index.html and shop.html) */
+.product-grid {
+    margin-bottom: 2rem;
+}
+
+.product-grid h2 {
+    font-size: 1.8rem;
+    color: #002147; /* Oxford Blue */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.product-grid .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.4rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #2E7D32; /* Emerald Green */
+    margin-bottom: 0.5rem;
+}
+
+.product-card a, .product-card button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2E7D32; /* Emerald Green */
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card a:hover, .product-card button:hover {
+    background-color: #1B5E20; /* Darker Emerald Green */
+}
+
+/* Feedback Content section (feedback.html) */
+.feedback-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feedback-form {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.feedback-form h3 {
+    font-size: 1.6rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.feedback-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.feedback-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.feedback-form label[for="allow-display"] {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.feedback-form button {
+    background-color: #2E7D32; /* Emerald Green */
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #1B5E20; /* Darker Emerald Green */
+}
+
+/* Contact Content section (contact.html) */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-form h3 {
+    font-size: 1.6rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #2E7D32; /* Emerald Green */
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1B5E20; /* Darker Emerald Green */
+}
+
+.contact-info {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #2E7D32; /* Emerald Green */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Testimonials section (index.html and feedback.html) */
+.testimonials {
+    margin-bottom: 2rem;
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    color: #002147; /* Oxford Blue */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 3px solid #2E7D32; /* Emerald Green */
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial .author {
+    font-size: 1rem;
+    color: #2E7D32; /* Emerald Green */
+    font-style: italic;
+}
+
+/* Call-to-Action Banner (index.html) */
+section.call-to-action, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) {
+    background-color: #F5F5F5; /* Light Gray */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.call-to-action h2, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) h2 {
+    font-size: 1.8rem;
+    color: #002147; /* Oxford Blue */
+    margin-bottom: 1rem;
+}
+
+section.call-to-action p, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+section.call-to-action a, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2E7D32; /* Emerald Green */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+section.call-to-action a:hover, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) a:hover {
+    background-color: #1B5E20; /* Darker Emerald Green */
+}
+
+/* Footer styles (for all pages) */
+footer {
+    background-color: #002147; /* Oxford Blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #2E7D32; /* Emerald Green */
+}
+
+/* Conditional margin for pages with/without sidebar */
+body:has(aside) header,
+body:has(aside) main,
+body:has(aside) footer {
+    margin-left: 250px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    aside {
+        width: 200px;
+    }
+
+    body:has(aside) header,
+    body:has(aside) main,
+    body:has(aside) footer {
+        margin-left: 200px;
+    }
+
+    .shop-hero h2, .feedback-hero h2, .about-hero h2, .contact-hero h2, section.hero h2, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) h2 {
+        font-size: 1.8rem;
+    }
+
+    .shop-hero p, .feedback-hero p, .about-hero p, .contact-hero p, section.hero p, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) p {
+        font-size: 1rem;
+    }
+
+    .product-grid .products, .testimonial-grid, .feedback-content, .contact-content, .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    body:has(aside) header,
+    body:has(aside) main,
+    body:has(aside) footer {
+        margin-left: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .shop-hero h2, .feedback-hero h2, .about-hero h2, .contact-hero h2, section.hero h2, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) h2 {
+        font-size: 1.6rem;
+    }
+
+    .shop-hero p, .feedback-hero p, .about-hero p, .contact-hero p, section.hero p, section:first-child:not(.shop-hero):not(.feedback-hero):not(.about-hero):not(.contact-hero) p {
+        font-size: 0.9rem;
+    }
+
+    .product-grid h2, section.about-us h2, section:nth-child(2):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) h2, section.call-to-action h2, section:nth-child(5):not(.product-grid):not(.feedback-content):not(.about-content):not(.contact-content) h2, .feedback-form h3, .testimonials h3, .our-story h3, .mission h3, .values h3, .team h3, .contact-form h3, .contact-info h3 {
+        font-size: 1.6rem;
+    }
+}
